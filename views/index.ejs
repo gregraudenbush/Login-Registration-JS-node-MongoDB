@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      *{
+        font-family: "Courier New", Courier, monospace;
+        background-color: aquamarine;
+        text-align: center
+        
+      }
+      .logindev {
+        border-style: solid;
+        width: 25%;
+        padding: 10px;
+        /*text-align: right;*/
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px;
+      }  
+    </style>
+  </head>
+  <body>
+    <h1>Please Login or Register</h1><br>
+    <% if(typeof(errors) != 'undefined'){ %>
+      <!--<% for(i in errors){ %>-->
+        <h4><%= errors.message %></h4>
+      <!--<% } %>  -->
+    <% } %>
+     <!--<% if(typeof(errors) != 'undefined'){ %>-->
+      <!--<% for(i in errors){ %>-->
+        <h4><%= message %></h4>
+      <!--<% } %>  -->
+    <!--<% } %>-->
+    <div class="logindev">
+      <form action="login" method="post" style="float:right">
+        Email:
+        <input type="email" name="email" style="float:right"><br>
+        Password:
+        <input type="password" name="password" style="float:right">
+        <br><br>
+        <input type="submit" value="Login" style="float:right"> 
+      </form>
+    </div>
+
+    <div class="logindev">
+      <form action="register" method="post"  style="float:right">
+        First Name:
+        <input type="text" name='first_name' style="float:right" ><br>
+        Last Name:
+        <input type="text" name="last_name" style="float:right"><br>
+        Email:
+        <input type="email" name="email" style="float:right"><br>
+        Password:
+        <input type="password" name="password" style="float:right"><br>
+        Confirm Password:
+        <input type="password" name="password2" style="float:right"><br>
+        Birthday:
+        <input type="date" name="birthday"style="float:right" >
+        <br><br>
+        <input type="submit" value="Register" style="float:right"> 
+      </form>
+    </div>
+  
+  </body>
+</html>
